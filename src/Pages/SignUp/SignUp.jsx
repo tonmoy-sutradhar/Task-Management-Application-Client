@@ -109,9 +109,13 @@ const SignUp = () => {
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full bg-gradient-to-br from-white via-blue-300 to-blue-400"></div>
             <div className="z-10 space-y-2 text-center">
               <h2 className="text-5xl font-medium text-black">Welcome</h2>
-              <h1 className="text-gray-600">Real State Property Platform</h1>
+              <h1 className="text-gray-600">Task Management Application</h1>
 
-              <img className="w-40 h-40 rounded-full" src="#" alt="Image" />
+              <img
+                className="w-64 h-40 rounded-lg"
+                src="https://www.cflowapps.com/wp-content/uploads/2018/07/task-management-process.png"
+                alt="Image"
+              />
             </div>
           </div>
 

@@ -55,7 +55,6 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="flex items-center">
-            {/* TO do logo */}
             <img className="w-12 h-12 rounded-lg" src={logo} alt="" />
             <h1 className="btn btn-ghost text-2xl text-blue-800">TaskCo</h1>
           </Link>
@@ -84,7 +83,7 @@ const Navbar = () => {
           ) : (
             <div className="flex justify-center items-center gap-3">
               <NavLink
-                // to="/login"
+                to="/login"
                 className="rounded-full bg-sky-600 px-6 py-2 text-white transition-all duration-300 hover:scale-90"
               >
                 Log In
