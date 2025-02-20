@@ -1,13 +1,14 @@
 import React from "react";
+import Banner from "../Component/Banner/Banner";
+import Content from "../Component/BannerTwo/Content";
+import BannerThree from "../Component/BannerThree/BannerThree";
 
 const Home = () => {
   return (
-    <div>
-      <div>
-        <h1 className="text-7xl font-bold text-center text-purple-500">
-          Tonmoy sutradhar
-        </h1>
-      </div>
+    <div className="mt-12">
+      <Banner></Banner>
+      <Content></Content>
+      <BannerThree></BannerThree>
     </div>
   );
 };
