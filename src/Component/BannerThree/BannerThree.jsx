@@ -132,7 +132,7 @@ const BannerThree = () => {
 
           {/* CTA Button */}
           <Link
-            to="/dashboard"
+            to="/"
             className="bg-lime-400 text-center text-white px-6 py-2 rounded-lg hover:bg-gray-800"
           >
             Start Managing Tasks
