@@ -1,4 +1,4 @@
-<img src="https://cdn.educba.com/academy/wp-content/uploads/2017/02/Task-Management-Application.jpg" alt="Logo" width="80" height="80" />
+<img src="https://cdn.educba.com/academy/wp-content/uploads/2017/02/Task-Management-Application.jpg" alt="Logo" width="200" height="80" />
 
 # Task Management Application Website
 
