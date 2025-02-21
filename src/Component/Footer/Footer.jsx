@@ -2,7 +2,8 @@ import logo from "../../assets/image/task-management-process.png";
 // className="px-4 divide-y  text-gray-800 relative bottom-0 left-0"
 const Footer = () => {
   return (
-    <footer className="bg-purple-900 text-gray-300 py-10">
+    // <footer className="bg-purple-900 text-gray-300 py-10">
+    <footer className="pt-6 pb-7 bg-gradient-to-r from-pink-200 via-purple-300 to-indigo-400     ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo and Description */}

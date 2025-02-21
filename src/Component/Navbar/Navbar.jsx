@@ -24,16 +24,17 @@ const Navbar = () => {
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/#">All Quires</NavLink>
+      <NavLink to="/#">All Task</NavLink>
+
       {user && (
         <>
-          <NavLink to="/#">Add Quires</NavLink>
-          <NavLink to="/#">My Quires</NavLink>
-          <NavLink to="/#">My Recommended</NavLink>
+          <NavLink to="/addTask">Add Task</NavLink>
+          <NavLink to="/#">My Added Task</NavLink>
+          <NavLink to="/#">About</NavLink>
         </>
       )}
 
-      <NavLink to="/#">All Recommended</NavLink>
+      {/* <NavLink to="/#">All Recommended</NavLink> */}
     </>
   );
   return (
