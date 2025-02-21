@@ -24,13 +24,12 @@ const Navbar = () => {
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/#">All Task</NavLink>
+      <NavLink to="/allTask">All Task</NavLink>
 
       {user && (
         <>
           <NavLink to="/addTask">Add Task</NavLink>
-          <NavLink to="/#">My Added Task</NavLink>
-          <NavLink to="/#">About</NavLink>
+          <NavLink to="/about">About</NavLink>
         </>
       )}
 

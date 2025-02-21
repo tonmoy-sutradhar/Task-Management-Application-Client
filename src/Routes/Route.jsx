@@ -5,6 +5,8 @@ import ErrorPage from "../Pages/ErrorPage";
 import SignUp from "../Pages/SignUp/SignUp";
 import Login from "../Pages/Login/Login";
 import AddTask from "../Component/AddTask/AddTask";
+import AllTask from "../Component/AllTask/AllTask";
+import About from "../Component/About/About";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/addTask",
         element: <AddTask></AddTask>,
+      },
+      {
+        path: "/allTask",
+        element: <AllTask></AllTask>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
     ],
   },
