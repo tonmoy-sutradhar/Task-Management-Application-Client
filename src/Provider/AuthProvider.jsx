@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import {
-  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -56,19 +56,18 @@ const AuthProvider = ({ children }) => {
         setUser(currentUser);
 
         // Get JWT token
-        //         await axios.post(
-        //           `${import.meta.env.VITE_API_URL}/jwt`,
-        //           {
-        //             email: currentUser?.email,
-        //           },
-        //           { withCredentials: true }
-        //         );
-        //       } else {
-        //         setUser(currentUser);
-        //         await axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
-        //           withCredentials: import app from './../firebase/firebase.config';
-        // true,
-        //         });
+        await axios.post(
+          `${import.meta.env.VITE_API_URL}/jwt`,
+          {
+            email: currentUser?.email,
+          },
+          { withCredentials: true }
+        );
+      } else {
+        setUser(currentUser);
+        await axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
+          withCredentials: true,
+        });
       }
       setLoading(false);
     });
