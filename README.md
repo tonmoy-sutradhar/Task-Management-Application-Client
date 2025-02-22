@@ -10,72 +10,37 @@
 
 - Task Management Application
 
-This platform allows users to collaborate and explore product alternatives through queries and recommendations. Users can add, update, delete, and view queries, as well as provide and manage recommendations for various products. It features dynamic navigation, responsive design, and secure authentication using Firebase and JWT. The platform includes search functionality, toggling grid layouts, and interactive UI inspired by Envato and similar themes. Backend services are powered by Node.js, Express.js, and MongoDB, with deployment on Vercel. All sensitive credentials are secured via environment variables, ensuring a safe and robust application experience.
+### Short Description:
+
+The Task Management Application is a collaborative tool that allows users to efficiently manage tasks through a drag-and-drop interface. Tasks are categorized into To-Do, In Progress, and Done, with real-time updates ensuring persistence. Users can add, edit, delete, and reorder tasks seamlessly.
+
+Built with React (Vite.js) and Express.js, the app integrates Firebase Authentication for secure access and MongoDB for data storage. The UI is clean, minimalistic, and fully responsive for both desktop and mobile users. Additional features include dark mode, due date indicators, and an activity log.
 
 ## Authors
 
 - [@Tonmoy Sutradhar](https://github.com/tonmoy-sutradhar)
 
-## Demo
+# Dependencies
 
-<p align="center">
-  <strong>Home Page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/YQPL1sG/Screenshot-1070.png" alt="Home Page" width="80%" />
-</p>
+#### Frontend
 
-<p align="center">
-  <strong>Same Home Page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/rsQqtt1/Screenshot-1071.png" alt="Home Page" width="80%" />
-</p>
+- React (Vite.js)
+- DND Kit (Drag and drop support)
+- Firebase Authentication
+- Tailwind CSS (Styling)
 
-<p align="center">
-  <strong>All Quires Page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/wwLtnhn/Screenshot-1072.png" alt="All Sports Equipment Page" width="80%" />
-</p>
+#### Backend
 
-<p align="center">
-  <strong>Add Quires Page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/cYCQnh4/Screenshot-1073.png" alt="Add Sports Equipment Page" width="80%" />
-</p>
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
 
-<p align="center">
-  <strong>My Quires</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/hFZ0XYN/Screenshot-1074.png" alt="View Details Equipment" width="80%" />
-</p>
+#### Others
 
-<p align="center">
-  <strong>My Quires View Details</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/T2FHXW7/Screenshot-1075.png" alt="My Equipment List" width="80%" />
-</p>
-
-<p align="center">
-  <strong>My Recommend query</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/hcTm9sN/Screenshot-1076.png" alt="Update Equipment Page" width="80%" />
-</p>
-<p align="center">
-  <strong>All Recommend quires</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/Gcyf7vY/Screenshot-1077.png" alt="Update Equipment Page" width="80%" />
-</p>
-
-<p align="center">
-  <strong>Registration Page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/Y2mYcBg/Screenshot-1078.png" alt="Register Page" width="80%" />
-</p>
-
-<p align="center">
-  <strong>Login page</strong>  
-  <br>
-  <img src="https://i.ibb.co.com/z2wq1Wc/Screenshot-1079.png" alt="Login page" width="80%" />
-</p>
+- Dotenv (for environment variable management)
+- Axios (for API requests)
+- Cors (for handling cross-origin requests)
+- Nodemon (for development monitoring)
 
 # Features
 
@@ -84,24 +49,14 @@ This platform allows users to collaborate and explore product alternatives throu
 - Login and registration with email/password and an additional method (Example->, Google).
 - Dynamic navbar showing user details and logout option upon login.
 
-#### Product Management:
+#### Task Management:
 
-- Add, update, and delete sports equipment with customizable fields like rating, price, and stock quantity.
-- Logged-in users can view and manage their added equipment on a private "My Equipment List" page.
+- Add, update, and delete task.
+- Logged-in users can update and delete task.
 
 #### Responsive Design:
 
 - Fully responsive interface for seamless navigation across mobile, tablet, and desktop devices.
-
-#### Advanced Product Features:
-
-- View detailed product information with beautiful design on a private route.
-- Search products by product name for better usability.
-
-#### Modern UI Elements:
-
-- Interactive loading spinners, animated sliders, and additional meaningful sections on the homepage.
-- Integration of Lottie React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
 
 #### Error Handling and Feedback:
 
@@ -121,8 +76,6 @@ This platform allows users to collaborate and explore product alternatives throu
 - React Router: For managing routing and private routes.
 - Tailwind CSS / Bootstrap: For styling and ensuring responsive design.
 - Lottie React: For integrating animations.
-- React Awesome Reveal: For scroll animations.
-- React Tooltip: For tooltips and interactivity.
 
 #### Backend Technologies:
 
