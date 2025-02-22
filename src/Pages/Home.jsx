@@ -7,7 +7,7 @@ import TaskInfo from "../Component/Taskinfo/TaskInfo";
 
 const Home = () => {
   return (
-    <div className="mt-[72px]">
+    <div className="mt-14">
       <Banner></Banner>
       <Content></Content>
       <BannerThree></BannerThree>

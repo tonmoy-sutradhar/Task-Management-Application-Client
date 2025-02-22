@@ -8,6 +8,7 @@ import AddTask from "../Component/AddTask/AddTask";
 import AllTask from "../Component/AllTask/AllTask";
 import About from "../Component/About/About";
 import EditTask from "../Component/EditTask/EditTask";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,15 +23,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTask",
-        element: <AddTask></AddTask>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <AddTask></AddTask>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/allTask",
-        element: <AllTask></AllTask>,
+        element: (
+          <PrivateRoute>
+            <AllTask></AllTask>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/editTask/:id",
-        element: <EditTask></EditTask>,
+        element: (
+          <PrivateRoute>
+            <EditTask></EditTask>
+          </PrivateRoute>
+        ),
       },
 
       {

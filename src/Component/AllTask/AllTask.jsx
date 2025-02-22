@@ -303,14 +303,41 @@ import {
 } from "@dnd-kit/core";
 import LoadinSpinner from "../LoadinSpinner/LoadinSpinner";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const fetchTasks = async () => {
   const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-task`);
   return data;
 };
 
-const deleteTask = async (id) => {
-  await axios.delete(`${import.meta.env.VITE_API_URL}/task-delete/${id}`);
+// const deleteTask = async (id) => {
+//   await axios.delete(`${import.meta.env.VITE_API_URL}/task-delete/${id}`);
+// };
+const handleDelete = async (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_API_URL}/task-delete/${id}`
+      );
+      const { data } = response;
+
+      if (data.deletedCount > 0) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    }
+  });
 };
 
 const updateTaskCategory = async ({ id, newCategory }) => {
@@ -337,12 +364,12 @@ const AllTask = () => {
     queryFn: fetchTasks,
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: deleteTask,
-    onSuccess: () => {
-      queryClient.invalidateQueries(["tasks"]);
-    },
-  });
+  // const deleteMutation = useMutation({
+  //   mutationFn: deleteTask,
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries(["tasks"]);
+  //   },
+  // });
 
   const updateCategoryMutation = useMutation({
     mutationFn: updateTaskCategory,
@@ -377,7 +404,7 @@ const AllTask = () => {
               key={category}
               id={category}
               tasks={tasks}
-              deleteMutation={deleteMutation} // Pass deleteMutation here
+              // deleteMutation={deleteMutation} // Pass deleteMutation here
             />
           ))}
         </div>
@@ -415,27 +442,33 @@ const TaskCard = ({ task, deleteMutation }) => {
   });
 
   return (
-    <Link to={`/editTask/${task._id}`}>
-      <div
-        ref={setNodeRef}
-        {...attributes}
-        {...listeners}
-        className="p-4 bg-white border rounded-md mt-2 shadow cursor-pointer"
-        style={{ transform: `translate(${transform?.x}px, ${transform?.y}px)` }}
-      >
-        <h3 className="text-lg font-semibold">{task.title}</h3>
-        <p className="text-gray-600">{task.description}</p>
-        <p className="text-sm text-gray-400 mt-1">
-          {new Date(task.timestamp).toLocaleString()}
-        </p>
+    <div
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      className="p-4 bg-white border rounded-md mt-2 shadow cursor-pointer"
+      style={{ transform: `translate(${transform?.x}px, ${transform?.y}px)` }}
+    >
+      <h3 className="text-lg font-semibold">{task.title}</h3>
+      <p className="text-gray-600">{task.description}</p>
+      <p className="text-sm text-gray-400 mt-1">
+        {new Date(task.timestamp).toLocaleString()}
+      </p>
+      <Link>
         <button
-          onClick={() => deleteMutation.mutate(task._id)}
+          // onClick={() => deleteMutation.mutate(task._id)}
+          onClick={() => handleDelete(task._id)}
           className="mt-2 px-3 py-1 bg-red-500 rounded-lg text-white"
         >
           Delete Task
         </button>
-      </div>
-    </Link>
+      </Link>
+      <Link to={`/editTask/${task._id}`}>
+        <button className="mt-2 ml-2 px-3 py-1 bg-blue-500 rounded-lg text-white">
+          Update Task
+        </button>
+      </Link>
+    </div>
   );
 };
 
