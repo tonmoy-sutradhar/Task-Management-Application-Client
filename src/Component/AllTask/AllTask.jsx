@@ -302,6 +302,7 @@ import {
   useDroppable,
 } from "@dnd-kit/core";
 import LoadinSpinner from "../LoadinSpinner/LoadinSpinner";
+import { Link } from "react-router-dom";
 
 const fetchTasks = async () => {
   const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-task`);
@@ -414,25 +415,27 @@ const TaskCard = ({ task, deleteMutation }) => {
   });
 
   return (
-    <div
-      ref={setNodeRef}
-      {...attributes}
-      {...listeners}
-      className="p-4 bg-white border rounded-md mt-2 shadow cursor-pointer"
-      style={{ transform: `translate(${transform?.x}px, ${transform?.y}px)` }}
-    >
-      <h3 className="text-lg font-semibold">{task.title}</h3>
-      <p className="text-gray-600">{task.description}</p>
-      <p className="text-sm text-gray-400 mt-1">
-        {new Date(task.timestamp).toLocaleString()}
-      </p>
-      <button
-        onClick={() => deleteMutation.mutate(task._id)}
-        className="mt-2 px-3 py-1 bg-red-500 rounded-lg text-white"
+    <Link to={`/editTask/${task._id}`}>
+      <div
+        ref={setNodeRef}
+        {...attributes}
+        {...listeners}
+        className="p-4 bg-white border rounded-md mt-2 shadow cursor-pointer"
+        style={{ transform: `translate(${transform?.x}px, ${transform?.y}px)` }}
       >
-        Delete Task
-      </button>
-    </div>
+        <h3 className="text-lg font-semibold">{task.title}</h3>
+        <p className="text-gray-600">{task.description}</p>
+        <p className="text-sm text-gray-400 mt-1">
+          {new Date(task.timestamp).toLocaleString()}
+        </p>
+        <button
+          onClick={() => deleteMutation.mutate(task._id)}
+          className="mt-2 px-3 py-1 bg-red-500 rounded-lg text-white"
+        >
+          Delete Task
+        </button>
+      </div>
+    </Link>
   );
 };
 

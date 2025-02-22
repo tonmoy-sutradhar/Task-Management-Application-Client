@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import AddTask from "../Component/AddTask/AddTask";
 import AllTask from "../Component/AllTask/AllTask";
 import About from "../Component/About/About";
+import EditTask from "../Component/EditTask/EditTask";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: "/allTask",
         element: <AllTask></AllTask>,
       },
+      {
+        path: "/editTask/:id",
+        element: <EditTask></EditTask>,
+      },
+
       {
         path: "/about",
         element: <About></About>,
