@@ -32,7 +32,7 @@ const AddTask = () => {
         taskData
       );
       form.reset();
-      navigate("/");
+      navigate("/allTask");
       toast.success("Task added successfully!");
     } catch (error) {
       toast.error(error.message);

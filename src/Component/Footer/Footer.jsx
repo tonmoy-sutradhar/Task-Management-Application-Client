@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p>
             &copy; Task Management Application | Developed by{" "}
-            <a href="#" className="text-white text-2xl hover:underline">
+            <a href="#" className="text-blue-500 text-2xl hover:underline">
               Tonmoy Sutradhar
             </a>
           </p>
