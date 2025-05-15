@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <img className="w-60 h-24 rounded-xl" src={logo} alt="logo" />
             {/* <h2 className="text-2xl font-bold text-white">ELITE PROPERTY</h2> */}
-            <p className="mt-4 text-start">
+            <p className="mt-4 text-start dark:text-black">
               Task Management Application is a platform offering anyone the
               ability to invest and potentially earn money from property at the
               click of a button
@@ -35,7 +35,7 @@ const Footer = () => {
           {/* Company Links */}
           <div>
             <h3 className="text-lg font-semibold text-white">Company</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 dark:text-black">
               <li>
                 <a href="#" className="hover:text-white">
                   About Us
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Help Links */}
           <div>
             <h3 className="text-lg font-semibold text-white">Help</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 dark:text-black">
               <li>
                 <a href="#" className="hover:text-white">
                   Browse Properties
@@ -99,7 +99,7 @@ const Footer = () => {
           {/* Insights Links */}
           <div>
             <h3 className="text-lg font-semibold text-white">Insights</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 dark:text-black">
               <li>
                 <a href="#" className="hover:text-white">
                   Help Center
@@ -121,7 +121,7 @@ const Footer = () => {
           {/* Legal Links */}
           <div>
             <h3 className="text-lg font-semibold text-white">Legal</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 dark:text-black">
               <li>
                 <a href="#" className="hover:text-white">
                   Privacy Policy
@@ -148,7 +148,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p>
+          <p className="dark:text-black">
             &copy; Task Management Application | Developed by{" "}
             <a href="#" className="text-blue-500 text-2xl hover:underline">
               Tonmoy Sutradhar
