@@ -119,8 +119,14 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="flex items-center">
-            <img className="w-12 h-12 rounded-lg" src={logo} alt="" />
-            <h1 className="btn btn-ghost text-2xl text-blue-800">TaskFlow</h1>
+            <img
+              className="w-12 h-12 rounded-lg hidden md:block"
+              src={logo}
+              alt=""
+            />
+            <h1 className="btn btn-ghost text-xl mr-20 md:text-2xl md:ml-6 text-blue-800">
+              TaskFlow
+            </h1>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -131,7 +137,7 @@ const Navbar = () => {
           <button
             title="Change theme"
             onClick={toggleTheme}
-            className={` text-3xl mr-3 bg-[#e26fc1] font-bold transition duration-300 rounded-md shadow ${
+            className={` text-xl  md:text-3xl mr-3 bg-[#e26fc1] font-bold transition duration-300 rounded-md shadow ${
               theme === "light" ? "text-black " : "text-black bg-gray-950 "
             }`}
           >
@@ -141,7 +147,7 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-3">
               <img
                 title={user?.displayName}
-                className="w-11 rounded-full"
+                className="w-8 md:w-11 rounded-full"
                 src={user?.photoURL}
                 alt="Profile-photo"
               />
@@ -149,7 +155,7 @@ const Navbar = () => {
               <button
                 onClick={handleLogout}
                 // onClick={logOut}
-                className="rounded-full bg-red-500 px-6 py-2 text-white transition-all duration-300 hover:scale-90"
+                className="px-3 py-1 rounded-full bg-red-500 md:px-6  text-white transition-all duration-300 hover:scale-90"
               >
                 LogOut
               </button>
