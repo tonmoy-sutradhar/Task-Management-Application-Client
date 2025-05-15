@@ -449,8 +449,8 @@ const TaskCard = ({ task, deleteMutation }) => {
       className="p-4 bg-white border rounded-md mt-2 shadow cursor-pointer"
       style={{ transform: `translate(${transform?.x}px, ${transform?.y}px)` }}
     >
-      <h3 className="text-lg font-semibold">{task.title}</h3>
-      <p className="text-gray-600">{task.description}</p>
+      <h3 className="text-lg font-semibold dark:text-black">{task.title}</h3>
+      <p className="text-gray-600 dark:text-gray-800">{task.description}</p>
       <p className="text-sm text-gray-400 mt-1">
         {new Date(task.timestamp).toLocaleString()}
       </p>

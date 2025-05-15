@@ -60,7 +60,7 @@ const TaskInfo = () => {
       <h1 className="text-4xl font-bold text-center mb-5">All Tasks</h1>
 
       {/* Category Buttons */}
-      <div className="flex justify-center gap-4 mb-5">
+      <div className="flex justify-center gap-4 mb-5 dark:text-black">
         {["To-Do", "In Progress", "Done"].map((cat) => (
           <button
             key={cat}
@@ -77,10 +77,28 @@ const TaskInfo = () => {
       {/* Task Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredTasks?.map((task) => (
-          <div key={task._id} className="p-5 border rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold">{task.title}</h2>
-            <p className="text-gray-600">{task.description}</p>
-            <p className="text-sm text-gray-400 mt-2">
+          // <div key={task._id} className="p-5 border rounded-lg shadow-md">
+          //   <h2 className="text-black text-xl font-semibold dark:text-white">
+          //     {task.title}
+          //   </h2>
+          //   <p className="text-gray-600 dark:text-gray-300">
+          //     {task.description}
+          //   </p>
+          //   <p className="text-sm text-gray-400 mt-2">
+          //     Timestamp: {new Date(task.timestamp).toLocaleString()}
+          //   </p>
+          // </div>
+          <div
+            key={task._id}
+            className="p-5 border rounded-lg shadow-md bg-white dark:bg-gray-700"
+          >
+            <h2 className="text-xl font-semibold text-black dark:text-white">
+              {task.title}
+            </h2>
+            <p className="text-gray-800 dark:text-gray-300">
+              {task.description}
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
               Timestamp: {new Date(task.timestamp).toLocaleString()}
             </p>
           </div>
