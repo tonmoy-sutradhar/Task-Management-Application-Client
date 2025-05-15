@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
           <Link to="/" className="flex items-center">
             <img className="w-12 h-12 rounded-lg" src={logo} alt="" />
-            <h1 className="btn btn-ghost text-2xl text-blue-800">TaskCo</h1>
+            <h1 className="btn btn-ghost text-2xl text-blue-800">TaskFlow</h1>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

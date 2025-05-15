@@ -60,7 +60,7 @@ const Banner = () => {
             to="/dashboard"
             className="bg-green-300 text-black px-6 py-2 rounded-md"
           >
-            Start Managing Tasks!
+            Start Managing Tasks !!
           </Link>
         </div>
 
