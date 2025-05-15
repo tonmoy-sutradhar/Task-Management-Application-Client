@@ -24,24 +24,75 @@ const Navbar = () => {
   //   }
   // };
 
+  // const links = (
+  //   <>
+  //     <NavLink to="/">Home</NavLink>
+  //     <NavLink to="/about">About</NavLink>
+
+  //     {user && (
+  //       <>
+  //         <NavLink to="/allTask">All Task</NavLink>
+  //         <NavLink to="/addTask">Add Task</NavLink>
+  //       </>
+  //     )}
+
+  //     {/* <NavLink to="/#">All Recommended</NavLink> */}
+  //   </>
+  // );
+
   const links = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `font-bold ${theme === "dark" ? "text-white" : "text-black"} ${
+            isActive ? "underline" : ""
+          }`
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          `font-bold ${theme === "dark" ? "text-white" : "text-black"} ${
+            isActive ? "underline" : ""
+          }`
+        }
+      >
+        About
+      </NavLink>
 
       {user && (
         <>
-          <NavLink to="/allTask">All Task</NavLink>
-          <NavLink to="/addTask">Add Task</NavLink>
+          <NavLink
+            to="/allTask"
+            className={({ isActive }) =>
+              `font-bold ${theme === "dark" ? "text-white" : "text-black"} ${
+                isActive ? "underline" : ""
+              }`
+            }
+          >
+            All Task
+          </NavLink>
+          <NavLink
+            to="/addTask"
+            className={({ isActive }) =>
+              `font-bold ${theme === "dark" ? "text-white" : "text-black"} ${
+                isActive ? "underline" : ""
+              }`
+            }
+          >
+            Add Task
+          </NavLink>
         </>
       )}
-
-      {/* <NavLink to="/#">All Recommended</NavLink> */}
     </>
   );
+
   return (
     <>
-      <div className="navbar bg-gradient-to-r from-pink-200 via-purple-300 to-indigo-400 opacity-80 px-6 fixed top-0 left-0 w-full z-10">
+      <div className="navbar  bg-gradient-to-r from-pink-200 via-purple-300 to-indigo-400 opacity-80 px-6 fixed top-0 left-0 w-full z-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
